@@ -1,0 +1,32 @@
+POST http://127.0.0.1:3333/push
+Accept: */*
+Cache-Control: no-cache
+
+{ "id": "12306", "topic": "fuck", "delay": 10, "ttr": 30, "retry": 0, "body": "hello world"}
+
+###
+
+POST http://127.0.0.1:3333/pop
+Accept: */*
+Cache-Control: no-cache
+
+{ "topic": "fuck", "timeout": 30}
+
+###
+
+POST http://127.0.0.1:3333/finish
+Accept: */*
+Cache-Control: no-cache
+
+{ "id": "12306" }
+
+###
+
+POST http://127.0.0.1:3333/get
+Accept: */*
+Cache-Control: no-cache
+
+{ "id": "12306" }
+
+###
+
